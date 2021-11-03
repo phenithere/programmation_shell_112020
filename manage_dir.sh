@@ -4,8 +4,8 @@
 #En utilisant des variables
 set -x
 
-#Variabilise le nom du repertoire : rep=backup
-rep=backup
+#Variabilise le nom du repertoire : rep=backup new : rep=sauvegarde
+rep=sauvegarde
 
 #Création d'un repertoire backup dans la home directory du user qui lance le script (mkdir)
 
@@ -15,4 +15,4 @@ mkdir $HOME/$rep 2>/dev/null  # mise en rebut de la sortie stderr
 
 #Affichage des propriété du répertoire backup (ls -ld rep)
 echo "Propriétés :"
-echo "ls -ld  $HOME/$rep"
+ls -ld  $HOME/$rep
