@@ -6,7 +6,12 @@
 
 #Variabilise le nom du repertoire : rep=backup new : rep=sauvegarde
 #rep=sauvegarde
-rep=$1
+
+# Utilisation de l'argument passé au declenchement
+#rep=$1
+
+# Utilisation commande read pour demande une saisie utilisateur et la stocker dans variables
+read -p "Veuillez saisir un nom de répertoire : " rep
 
 #Création d'un repertoire backup dans la home directory du user qui lance le script (mkdir)
 # Utilisation de la variable reserve $0 : nom du script en cours tel qu'il est lancé
@@ -21,3 +26,8 @@ mkdir $HOME/$rep 2>/dev/null  # mise en rebut de la sortie stderr
 echo "Propriétés :"
 ls -ld  $HOME/$rep
 #RC=$(($RC + $?))
+
+
+unset rep
+
+echo "la variable rep est-elle toujours là ?: $rep"
