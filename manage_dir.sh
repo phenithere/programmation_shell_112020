@@ -37,6 +37,8 @@ else
   exit 2
 fi
 
+# Exemple test simple
+# [[ -f fichier ]] && echo "le fichier existe"
 
 #unset rep
 
