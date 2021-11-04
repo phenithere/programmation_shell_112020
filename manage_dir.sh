@@ -5,7 +5,8 @@
 #set -x
 
 #Variabilise le nom du repertoire : rep=backup new : rep=sauvegarde
-rep=sauvegarde
+#rep=sauvegarde
+rep=$1
 
 #Création d'un repertoire backup dans la home directory du user qui lance le script (mkdir)
 # Utilisation de la variable reserve $0 : nom du script en cours tel qu'il est lancé
@@ -14,14 +15,9 @@ echo "Script lancé: $(basename $0)"
 
 echo "Creation du repertoire $HOME/$rep" 
 mkdir $HOME/$rep 2>/dev/null  # mise en rebut de la sortie stderr
-RC=$? && echo "Code retour commande mkdir : $RC"
-#mkdir ~/$rep
 
 
 #Affichage des propriété du répertoire backup (ls -ld rep)
 echo "Propriétés :"
 ls -ld  $HOME/$rep
-RC=$(($RC + $?))
-echo "Code retour final  : $RC"
-
-echo $RC
+#RC=$(($RC + $?))
