@@ -1,6 +1,6 @@
 #!/bin/bash
 
-
+set -x
 # Script d'analyse et retour de taille de répertoires
 
 # Le script attend un argument en entrée : /rep
@@ -12,20 +12,20 @@
 if [ $# -ne 1 ]
 then
   echo "Nombre d'arguments passés invalide"
-  echo "Usage: $(basename $0) <repertoire>"
+  echo "Usage: $(basename "$0") <repertoire>"
   exit 1  
 fi
 
 
 # verifier que le repertoire donné en argument existe
-if [ -d $1 ]
+if [ -d "$1" ]
 then
 # Boucler avec for sur le repertoire parent afin d'afficher la taille des repertoires presents
 # utilisation de la substitution de commande pour alimenter la boucle for (ls)
 # du -sh {element}
-  for i in $(ls $1)
+  for i in "$1"/*
   do
-    du -sh $1/$i
+    du -sh "$i"
   done
 else
   echo "Le repertoire $1 n'existe pas"
