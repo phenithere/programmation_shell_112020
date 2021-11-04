@@ -18,16 +18,28 @@ read -p "Veuillez saisir un nom de répertoire : " rep
 # Utilisation de la substitution de commande $(basename $0) pour interpreter le resultat dans echo
 echo "Script lancé: $(basename $0)"
 
-echo "Creation du repertoire $HOME/$rep" 
-mkdir $HOME/$rep 2>/dev/null  # mise en rebut de la sortie stderr
+
+# Réaliser un test pour vérifier si le repertoire saisie existe/n'existe pas
+# Combiné à l'instruction if/else/fi
+# dans le cas ou le répertoire existe deja : on informe et on quitte avec exit
+# dans le cas ou le répertoire n'existe pas : on cree le repertoire
+
+if [ ! -d $HOME/$rep ]
+then
+  echo "Creation du repertoire $HOME/$rep" 
+  mkdir $HOME/$rep 2>/dev/null  # mise en rebut de la sortie stderr
+  #Affichage des propriété du répertoire backup (ls -ld rep)
+  echo "Propriétés :"
+  ls -ld  $HOME/$rep
+  #RC=$(($RC + $?))
+else
+  echo "Le répertoire existe déjà"
+  exit 2
+fi
 
 
-#Affichage des propriété du répertoire backup (ls -ld rep)
-echo "Propriétés :"
-ls -ld  $HOME/$rep
-#RC=$(($RC + $?))
+#unset rep
 
+#echo "la variable rep est-elle toujours là ?: $rep"
 
-unset rep
-
-echo "la variable rep est-elle toujours là ?: $rep"
+echo "Fin du programme"
