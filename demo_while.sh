@@ -3,7 +3,7 @@
 # Presentation boucle while
 
 # Utilisé pour parcourir une liste (fichier)
-while read ligne
+while read -r ligne
 do
   echo "$ligne"
 done < /etc/group

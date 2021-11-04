@@ -47,7 +47,5 @@ case $reponse in
      ;;
 esac
 done
-
-
 echo "Fin du menu, mais suite du programme"
 echo "envoi de mail de la liste"
