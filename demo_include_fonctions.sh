@@ -23,14 +23,3 @@ function log {
     return 0
   fi
 }
-
-
-function envoi_ftp {
-
-  host=$1
-  user=$2
-  pass=$3
- 
-  echo "ftp $user:$pass@$host"
-}
-

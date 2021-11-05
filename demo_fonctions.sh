@@ -15,8 +15,3 @@ verbose=true
 # Appel a une fonction externe
 log "Database boby sauvegardée"
 log "Tranfert dump ok" 
-
-
-
-
-envoi_ftp pierre $password monftp.formation.lan
