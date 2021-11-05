@@ -89,7 +89,7 @@ case $# in
     ;;
 esac
 
-read -p "Souhaitez-vous archiver ? " reponse
+read -p "Souhaitez-vous archiver ? y|n " reponse
 
 case $reponse in
   y|Y)
