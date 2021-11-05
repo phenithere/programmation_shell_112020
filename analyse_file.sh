@@ -2,9 +2,7 @@
 
 # Script d'analyse de fichiers dans /backup
 
-# Le script doit lister les éléments du répertoire /backup et intégrer uniquement ceux finissant par .log dans un tableau 
-
-# Affichage du tableau
+# Le script doit lister les éléments du répertoire /backup et intégrer uniquement ceux finissant par .log
 
 # Interrogation utilisateur si analyse d'un fichier : l'utilisateur doit saisir un nom de fichier ou quitter
 # Si nom de fichier
