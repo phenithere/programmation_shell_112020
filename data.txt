@@ -1,0 +1,12 @@
+maths exam1 18
+physique exam1 16
+français exam1 15
+archiordi exam1 16
+logicieldeb examen 14
+visualbasic 15
+structdedonnees 16
+programmationc 14
+circuitslogiques 15
+mecaniquedesfluides 17
+rdm 17
+comptabilité 18
