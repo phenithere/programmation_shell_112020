@@ -1,0 +1,18 @@
+<databases>
+  <sources>
+    <host>prod</host>
+    <port>1522</port>
+    <tns>GP1</tns>
+    <user>P11</user>
+    <password>foyerLux</password>
+ </sources>
+</databases>
+<databases>
+  <sources>
+    <host>prod</host>
+    <port>1522</port>
+    <tns>GP12</tns>
+    <user>FOYER</user>
+    <password>foyerLux</password>
+ </sources>
+</databases>
